@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>{{ data.title_long }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'style/detail.css' %}">
+    <link rel="stylesheet" href="{% static 'style/bttn.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha256-c+C87jupO1otD1I5uyxV68WmSLCqtIoNlcHLXtzLCT0=" crossorigin="anonymous" />
+    
+    <nav class="d-flex p-4 justify-content-end">
+        <button class="fa fa-search btn-search"></button>
+    
+    </nav>
+</head>
+<body>
+
+
+
+<div class="container-fluid">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xs-7 col-sm-7 col-md-6 col-lg-6 col-xl-6">
+                <img src="{{ data.large_cover_image }}" alt="Cover Image" class="img-fluid rounded cover">
+            </div>
+            <div class="col-12 col-xs-5 col-sm-5 col-md-6 col-lg-6 col-xl-6">
+                <h3 class="text-white">{{ data.title_long }}</h3>
+                
+                <p class="text-white">
+                    {% for genre in data.genres%} 
+                    #{{ genre }}
+                    {% endfor %}
+                </p>
+                
+                <h4 class="text-white">Download : </h4>
+                
+                {% for torrent in data.torrents  %}
+                
+                    <a href="{{ torrent.url }}" class="btn m-1 download_button text-white">{{ torrent.quality }} {{ torrent.type }}</a>
+
+                    
+                
+                    {% endfor %}     
+            <br>
+            <br>
+            <h6 class="text-white">Runtime: {{ data.runtime }} mins</h6>
+            <h5 class="text-white"><i class="fa fa-imdb"></i> &nbsp {{ data.rating }} <i class="fa fa-star"></i> </h5>
+            <br>
+                <span class="fa fa-download text-white"> {{ data.download_count }} times</span>
+                <h6 class="text-white">Language: {{ data.language }}</h6>
+                <h6 class="text-white">PG Rating : {{ data.mpa_rating }}</h6>
+            
+            </div><!--right side ends-->
+        </div>
+
+    </div>
+
+<div class="container">
+    <div class="row">
+        
+        <div class="description col-12 col-md-6 col-xl-6">
+            <h5 class="text-white">Description: </h5>
+            <p class="text-white">{{data.description_intro}}</p>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-6">
+            <h5 class="text-white">Casts: </h5>
+            {%  for i in data.cast %}
+            
+            <h5 class="text-white"> {{ i.name }} as {{i.character_name}}</h5> 
+
+            {%endfor%}
+        </div>
+
+        </div>
+    </div>
+
+    <!--table-->
+    <div class="container text-center p-2 table-responsive">
+        <h3 class="text-white">File Information:</h3>
+        <table class="table text-white table-bordered ">
+            <thead>
+            <tr>
+            <th>Quality</th>
+            <th>Size</th>
+            <th>Date Uploaded</th>
+            <th class="text-success">Seeds</th>
+            <th class="text-danger">Peers</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for torrent_data in data.torrents %}
+        <tr>
+            <td>{{ torrent_data.quality }} {{ torrent_data.type }}</td>
+            <td>{{ torrent_data.size }}</td>
+            <td>{{ torrent_data.date_uploaded }}</td>
+            <td>{{ torrent_data.seeds }}</td>
+            <td>{{ torrent_data.peers }}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+        </table>
+        
+    </div><!--table ends-->
+<div class="container">
+<h3 class="text-white">Screenshots:</h3>
+<img src="{{ data.large_screenshot_image1 }}" alt="Screenshot" class="img-fluid rounded cover"><br><br>
+<img src="{{ data.large_screenshot_image2 }}" alt="Screenshot" class="img-fluid rounded cover"><br><br>
+<img src="{{ data.large_screenshot_image3 }}" alt="Screenshot" class="img-fluid rounded cover"><br><br>
+</div>
+<h4 class="text-white">Trailer: </h4>
+<div class="embed-responsive embed-responsive-21by9">
+    <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/{{ data.yt_trailer_code }}" allowfullscreen></iframe>
+</div>
+
+</div>
+
+
+
+<div class="overlay">
+    <i class="closebtn d-flex p-4 justify-content-end fa fa-times text-white" title="Close Search"></i>
+<div class="container form-container text-center">
+    
+    <form method="GET" action="/search/">
+        {% csrf_token %}
+        <input type="search" autocomplete="off" name="movie" id="movie_search" placeholder="Search Movie" required>
+        <br><br>
+        <input type="submit" value="Search" class="bttn-unite bttn-md search-btn hvr-glow">
+    </form>
+
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

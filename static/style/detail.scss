@@ -1,0 +1,28 @@
+@import 'style';
+$background_color : #006667;
+
+.download_button{
+    border: 0.5px solid white !important;
+    
+    &:hover{
+        background-color: $background_color;
+        
+        transition: all 400ms;
+
+    }
+}
+.fa-imdb{
+    font-size: 1.5em !important;
+    color: #f3ce13 !important;
+}
+.fa-star{
+    color: yellow !important;
+}
+body{
+    background: linear-gradient(327deg, #014552 36%, #006667 100%) !important;
+}
+.cover{
+    -webkit-box-shadow: -1px 0px 5px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 0px 5px 5px rgba(0,0,0,0.75);
+    box-shadow: -1px 0px 5px 5px rgba(0,0,0,0.75);
+}

@@ -1,0 +1,119 @@
+$background_color : #006667;
+
+@mixin box_shadow_gen {
+    -webkit-box-shadow: inset 0px 3px 13px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 3px 13px -3px rgba(0,0,0,0.75);
+     box-shadow: inset 0px 3px 13px -3px rgba(0,0,0,0.75);
+} 
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(1,69,82);
+    background: linear-gradient(327deg, rgba(1,69,82,1) 36%, rgba(0,102,103,1) 100%);
+}
+a{
+    color: white;
+}
+.row{
+ .card{
+    background-color: $background_color;
+    @include box_shadow_gen;
+     border-radius: 1.5rem;
+     margin-bottom: 2rem;
+     overflow: hidden;
+     
+     &:hover{
+         opacity: 0.7;
+         cursor: pointer;
+     }
+    }
+}
+.page-link{
+    background-color: $background_color !important;
+    border-color: white !important;
+    color: white;
+    -webkit-box-shadow: -4px -3px 21px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px -3px 21px 2px rgba(0,0,0,0.75);
+box-shadow: -4px -3px 21px 2px rgba(0,0,0,0.75);
+    &:hover{
+        color: black;
+        background-color: white;
+
+    }
+}
+/*
+@media only screen and (min-width: 325px) {
+    .card{
+        width: 10rem ;
+    }
+}/*
+@media only screen and (min-width: 600px) {
+    .card{
+        width: 10rem !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .card{
+        width: 12rem !important;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .card{
+        width: 16rem !important;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .card{
+        width: 16rem !important;
+    }
+}*/
+
+/*form-container*/
+.overlay{
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $background_color;
+    background-color: $background_color;
+    
+}
+.form-container{
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+.btn-search{
+    background: transparent;
+    outline: 0;
+    border: 0;
+    color:  white ;
+    
+}
+#movie_search{
+    height: 7vh !important;
+    outline: 0;
+    width: 25vw;
+        
+    background-color: $background_color;
+    border: none;
+    border-bottom: 2px solid black;
+    &:focus{
+        border-bottom: 2px solid white;
+    }
+    &:hover{
+        border-bottom: 2px solid rebeccapurple;
+    }
+}
+.search-btn{
+    background-color: $background_color !important;
+    color: white !important;
+    border-color: white !important;
+    @include box_shadow_gen;
+}

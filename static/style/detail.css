@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #014552;
+  background: linear-gradient(327deg, #014552 36%, #006667 100%);
+}
+
+a {
+  color: white;
+}
+
+.row .card {
+  background-color: #006667;
+  -webkit-box-shadow: inset 0px 3px 13px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 3px 13px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 3px 13px -3px rgba(0, 0, 0, 0.75);
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.row .card:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/*
+@media only screen and (min-width: 325px) {
+    .card{
+        width: 10rem ;
+    }
+}/*
+@media only screen and (min-width: 600px) {
+    .card{
+        width: 10rem !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .card{
+        width: 12rem !important;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .card{
+        width: 16rem !important;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .card{
+        width: 16rem !important;
+    }
+}*/
+/*form-container*/
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #006667;
+  background-color: #006667;
+}
+
+.form-container {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.btn-search {
+  background: transparent;
+  outline: 0;
+  border: 0;
+  color: white;
+}
+
+#movie_search {
+  height: 7vh !important;
+  outline: 0;
+  width: 25vw;
+  background-color: #006667;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+#movie_search:focus {
+  border-bottom: 2px solid white;
+}
+
+#movie_search:hover {
+  border-bottom: 2px solid rebeccapurple;
+}
+
+.search-btn {
+  background-color: #006667 !important;
+  color: white !important;
+  border-color: white !important;
+  -webkit-box-shadow: inset 0px 3px 13px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 3px 13px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 3px 13px -3px rgba(0, 0, 0, 0.75);
+}
+
+.download_button {
+  border: 0.5px solid white !important;
+}
+
+.download_button:hover {
+  background-color: #006667;
+  transition: all 400ms;
+}
+
+.fa-imdb {
+  font-size: 1.5em !important;
+  color: #f3ce13 !important;
+}
+
+.fa-star {
+  color: yellow !important;
+}
+
+body {
+  background: linear-gradient(327deg, #014552 36%, #006667 100%) !important;
+}
+
+.cover {
+  -webkit-box-shadow: -1px 0px 5px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 5px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 0px 5px 5px rgba(0, 0, 0, 0.75);
+}

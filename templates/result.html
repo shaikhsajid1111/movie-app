@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{query }}</title>
+    {% load static %}
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="{% static 'style/style.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'style/bttn.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha256-c+C87jupO1otD1I5uyxV68WmSLCqtIoNlcHLXtzLCT0=" crossorigin="anonymous" />
+    <nav class="d-flex p-4 justify-content-end">
+    <button class="fa fa-search btn-search"></button>
+
+</nav>
+</head>
+<body>
+    
+   <!--card container-->
+   <div class="container-fluid">
+
+    
+
+    
+    <br>
+    <div class="container">
+        <h4 class="text-white">Results for '{{ query }}' found {{ movie_count }}</h4>
+        <div class="row">
+    
+        {% for movie in movies %}
+        <div class="col-6 col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-3">
+            <!---card-->
+    <a href="detail/{{movie.id}}"  title="{{ movie.title }}">
+            <div class="card">
+            <img class="card-img-top" src="{{ movie.medium_cover_image }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-white">{{movie.title}}</h5>
+          <p class="card-text text-white" style="
+          height:80px;
+          line-height:20px; 
+          overflow:hidden;">{{movie.description_full}}</p>
+          
+        
+            
+
+
+        </div>
+        
+    </div>
+</a>
+    <!--card ends-->
+    
+   </div> <!--col-->
+   {% endfor %} 
+</div>
+</div>
+
+
+</div>
+<!--card container ends-->
+<div class="overlay">
+    <i class="closebtn d-flex p-4 justify-content-end fa fa-times text-white" title="Close Search"></i>
+<div class="container form-container text-center">
+    
+    <form method="GET" action="/search/">
+        {% csrf_token %}
+        <input type="search" autocomplete="off" name="movie" id="movie_search" placeholder="Search Movie" required>
+        <br><br>
+        <input type="submit" value="Search" class="bttn-unite bttn-md search-btn hvr-glow">
+    </form>
+
+
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
