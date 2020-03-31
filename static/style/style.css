@@ -38,33 +38,7 @@ a {
   background-color: white;
 }
 
-/*
-@media only screen and (min-width: 325px) {
-    .card{
-        width: 10rem ;
-    }
-}/*
-@media only screen and (min-width: 600px) {
-    .card{
-        width: 10rem !important;
-    }
-}
-@media only screen and (min-width: 768px) {
-    .card{
-        width: 12rem !important;
-    }
-}
-@media only screen and (min-width: 992px) {
-    .card{
-        width: 16rem !important;
-    }
-}
-@media only screen and (min-width: 1200px){
-    .card{
-        width: 16rem !important;
-    }
-}*/
-/*form-container*/
+/*form-container search bar*/
 .overlay {
   height: 100%;
   width: 100%;
@@ -96,10 +70,13 @@ a {
 #movie_search {
   height: 7vh !important;
   outline: 0;
-  width: 25vw;
+  width: 30vw;
+  line-height: 7vh !important;
+  text-align: center;
   background-color: #006667;
   border: none;
   border-bottom: 2px solid black;
+  color: white;
 }
 
 #movie_search:focus {
@@ -107,7 +84,7 @@ a {
 }
 
 #movie_search:hover {
-  border-bottom: 2px solid rebeccapurple;
+  border-bottom: 2px solid white;
 }
 
 .search-btn {

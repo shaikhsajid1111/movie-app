@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha256-c+C87jupO1otD1I5uyxV68WmSLCqtIoNlcHLXtzLCT0=" crossorigin="anonymous" />
     <nav class="d-flex p-4 justify-content-end">
     <button class="fa fa-search btn-search"></button>
-
+        
 </nav>
+    
 </head>
 <body>
     
@@ -68,8 +69,8 @@
 <div class="container form-container text-center">
     
     <form method="GET" action="/search/">
-        {% csrf_token %}
-        <input type="search" autocomplete="off" name="movie" id="movie_search" placeholder="Search Movie" required>
+        
+        <input type="search" title="Enter movie to search" autocomplete="off" name="movie" id="movie_search" autofocus placeholder="Search Movie" required>
         <br><br>
         <input type="submit" value="Search" class="bttn-unite bttn-md search-btn hvr-glow">
     </form>

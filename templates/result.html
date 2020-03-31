@@ -66,8 +66,8 @@
 <div class="container form-container text-center">
     
     <form method="GET" action="/search/">
-        {% csrf_token %}
-        <input type="search" autocomplete="off" name="movie" id="movie_search" placeholder="Search Movie" required>
+        
+        <input type="search" autocomplete="off" name="movie" id="movie_search" placeholder="Search Movie" autofocus required>
         <br><br>
         <input type="submit" value="Search" class="bttn-unite bttn-md search-btn hvr-glow">
     </form>
