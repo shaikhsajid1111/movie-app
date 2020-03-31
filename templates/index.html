@@ -15,10 +15,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'style/bttn.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha256-c+C87jupO1otD1I5uyxV68WmSLCqtIoNlcHLXtzLCT0=" crossorigin="anonymous" />
-    <nav class="d-flex p-4 justify-content-end">
-    <button class="fa fa-search btn-search"></button>
-        
-</nav>
+    
+    <nav class="navbar">
+        <a class="navbar-brand text-white" href="#">
+            <img src="{% static 'images/nav-icon.png' %}" width="35" height="35" alt="">
+        MOVIES
+        </a>
+
+          <button class="fa fa-search btn-search mr-sm-2"></button>      
+      </nav>
+    
+    
     
 </head>
 <body>
@@ -103,4 +110,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="{% static 'js/index.js' %}"></script>
 </body>
+<footer class="pt-4 mt-2">
+
+    <p class="text-center text-white">Copyright <i class="fa fa-copyright"></i> 2020 <a href="https://www.github.com/shaikhsajid1111">Sajid</a></p>
+</footer>
 </html>
