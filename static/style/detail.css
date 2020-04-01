@@ -96,6 +96,45 @@ a {
   box-shadow: inset 0px 3px 13px -3px rgba(0, 0, 0, 0.75);
 }
 
+.navbar {
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.65) !important;
+  -moz-box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.65) !important;
+  box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.65) !important;
+}
+
+/*footer design*/
+footer {
+  -webkit-box-shadow: -1px -6px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px -6px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px -6px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+footer .social-media .fa {
+  font-size: 2em !important;
+  padding: 10px;
+  color: white;
+}
+
+footer .fa-facebook:hover {
+  color: #3b5998;
+}
+
+footer .fa-instagram:hover {
+  color: #c32aa3;
+}
+
+footer .fa-github:hover {
+  color: black;
+}
+
+footer .fa-linkedin:hover {
+  color: #007bb5;
+}
+
+footer .fa-stack-overflow:hover {
+  color: #ef8236;
+}
+
 .download_button {
   border: 0.5px solid white !important;
 }

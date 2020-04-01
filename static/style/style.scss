@@ -109,4 +109,28 @@ footer{
     -webkit-box-shadow: -1px -6px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px -6px 5px 0px rgba(0,0,0,0.75);
     box-shadow: -1px -6px 5px 0px rgba(0,0,0,0.75);
+    .social-media .fa{
+        font-size: 2em !important;
+        padding: 10px;
+        color: white;
+        
+
+    }
+    .fa-facebook:hover{
+        color: #3b5998;
+    }
+
+    .fa-instagram:hover{
+        color: #c32aa3;
+    }
+
+    .fa-github:hover{
+        color: black;
+    }
+    .fa-linkedin:hover{
+        color: #007bb5;
+    }
+    .fa-stack-overflow:hover{
+        color: #ef8236;
+    }
 }
