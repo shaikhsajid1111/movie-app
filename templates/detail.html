@@ -14,9 +14,10 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="1 days">
     <meta name="author" content="sajid shaikh">
-
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" />
     <link rel="stylesheet" href="{% static 'style/detail.css' %}">
     <link rel="stylesheet" href="{% static 'style/bttn.css' %}">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha256-c+C87jupO1otD1I5uyxV68WmSLCqtIoNlcHLXtzLCT0=" crossorigin="anonymous" />
@@ -24,7 +25,7 @@
     <nav class="navbar">
         <a class="navbar-brand text-white" href="#">
             <img src="{% static 'images/nav-icon.png' %}" width="35" height="35" alt="">
-        MOVIES
+        e-MOVIES
         </a>
 
           <button class="fa fa-search btn-search mr-sm-2"></button>      
@@ -78,7 +79,7 @@
     <div class="row">
         
         <div class="description col-12 col-md-6 col-xl-6">
-            <h5 class="text-white">Description: </h5>
+            <h5 class="text-white pt-2">Description: </h5>
             <p class="text-white">{{data.description_intro}}</p>
         </div>
 
@@ -164,6 +165,6 @@
         <a target="_blank" rel="noopener" href="https://www.linked.com/shaikhsajid1111"><i class="fa fa-linkedin"></i></a>
         <a target="_blank" rel="noopener" href="https://www.stackoverflow.com/shaikhsajid1111"><i class="fa fa-stack-overflow"></i></a>
     </div>
-    <p class="text-center text-white">Copyright <i class="fa fa-copyright"></i> 2020 <a href="https://www.github.com/shaikhsajid1111">Sajid</a></p>
+    <p class="text-center text-white">Copyright <i class="fa fa-copyright"></i> 2020 <a href="https://www.github.com/shaikhsajid1111" class="text-white">Sajid</a></p>
 </footer>
 </html>

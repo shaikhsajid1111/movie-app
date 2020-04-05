@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Arsenal|Cabin+Condensed|Julius+Sans+One|Noto+Sans+HK|Overpass|Paytone+One|Rambla|Share&display=swap');
 $background_color : #006667;
 
 @mixin box_shadow_gen {
@@ -11,6 +12,9 @@ body{
     background: rgb(1,69,82);
     background: linear-gradient(327deg, rgba(1,69,82,1) 36%, rgba(0,102,103,1) 100%);
 }
+.navbar-brand{
+    font-family: 'Paytone One', sans-serif !important;
+}
 
 a{
     color: white;
@@ -23,7 +27,7 @@ a{
      border-radius: 1.5rem;
      margin-bottom: 2rem;
      overflow: hidden;
-     
+     font-family: 'Rambla', sans-serif;
      &:hover{
          opacity: 0.7;
          cursor: pointer;
@@ -134,3 +138,13 @@ footer{
         color: #ef8236;
     }
 }
+/*
+font-family: 'Overpass', sans-serif;
+font-family: 'Paytone One', sans-serif;
+font-family: 'Cabin Condensed', sans-serif;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Noto Sans HK', sans-serif;
+font-family: 'Arsenal', sans-serif;
+font-family: 'Rambla', sans-serif;
+font-family: 'Share', cursive;
+*/

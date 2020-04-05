@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(".btn-search").on("click",function(){
+    $(".btn-search").click(function(){
         $('.overlay').css("display","block");
     })
     $(".closebtn").click(function(){

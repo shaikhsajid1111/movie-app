@@ -1,4 +1,6 @@
 @import 'style';
+@import url('https://fonts.googleapis.com/css?family=Arsenal|Cabin+Condensed|Julius+Sans+One|Noto+Sans+HK|Overpass|Paytone+One|Rambla|Share&display=swap');
+
 $background_color : #006667;
 
 .download_button{
@@ -17,6 +19,9 @@ $background_color : #006667;
 }
 .fa-star{
     color: yellow !important;
+}
+.description{
+    font-family: 'Arsenal', sans-serif;
 }
 body{
     background: linear-gradient(327deg, #014552 36%, #006667 100%) !important;

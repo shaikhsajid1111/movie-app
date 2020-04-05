@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Arsenal|Cabin+Condensed|Julius+Sans+One|Noto+Sans+HK|Overpass|Paytone+One|Rambla|Share&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Arsenal|Cabin+Condensed|Julius+Sans+One|Noto+Sans+HK|Overpass|Paytone+One|Rambla|Share&display=swap");
 body {
   margin: 0;
   padding: 0;
   background: #014552;
   background: linear-gradient(327deg, #014552 36%, #006667 100%);
+}
+
+.navbar-brand {
+  font-family: 'Paytone One', sans-serif !important;
 }
 
 a {
@@ -17,6 +23,7 @@ a {
   border-radius: 1.5rem;
   margin-bottom: 2rem;
   overflow: hidden;
+  font-family: 'Rambla', sans-serif;
 }
 
 .row .card:hover {
@@ -135,6 +142,16 @@ footer .fa-stack-overflow:hover {
   color: #ef8236;
 }
 
+/*
+font-family: 'Overpass', sans-serif;
+font-family: 'Paytone One', sans-serif;
+font-family: 'Cabin Condensed', sans-serif;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Noto Sans HK', sans-serif;
+font-family: 'Arsenal', sans-serif;
+font-family: 'Rambla', sans-serif;
+font-family: 'Share', cursive;
+*/
 .download_button {
   border: 0.5px solid white !important;
 }
@@ -151,6 +168,10 @@ footer .fa-stack-overflow:hover {
 
 .fa-star {
   color: yellow !important;
+}
+
+.description {
+  font-family: 'Arsenal', sans-serif;
 }
 
 body {
