@@ -1,7 +1,12 @@
 # Movie Downloader
-> A movie downloading site, clean, responsive UI wit Django
-> It is the website for browsing content of YTS (YIFY torrent)
+ 
+ > A movie downloading site, clean, responsive UI with Django and Bootstrap
+ 
+ > It is the website for browsing content of YTS (YIFY torrent)
+ 
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/shaikhsajid1111/movie-app/graphs/commit-activity)
 
 ## Technologies
 - [Python](https://www.python.org)
